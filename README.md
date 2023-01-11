@@ -31,6 +31,12 @@ Finally, *Figure3* contains a plot of the error for each paramater vs the time i
 
 ![](./images/img03.png)
 
+
+## **Conclusions**
+
+The plots clearly show the prediction errors grow to an unacceptable margin rather quickly. Even fractions of a percent can lead to miles of error at this scale. Therefore the process of updating these measurements consistenly will continue to be of vital importance.
+
+
 ## **Links**
 
 
