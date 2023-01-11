@@ -14,20 +14,20 @@ I acquired several historical LTE's for the Suomi NPP satellite from Space-Track
 
 ## **Results**
 
-**Figure 1** shows a table of the raw data — the latitude, longitude, and altitude of the satellite on 1/11/2023, as well as the predictions for these parameters at each interval.
+*Figure 1* shows a table of the raw data — the latitude, longitude, and altitude of the satellite on 1/11/2023, as well as the predictions for these parameters at each interval.
 
 ![](./images/img01.png)
 
 > Figure 1
 
-**Figure 2** shows the percent error of these calculations compared to the ground truth.
+*Figure 2* shows the percent error of these calculations compared to the ground truth.
 
 
 ![](./images/img02.png)
 
 > Figure 2
 
-Finally, **Figure3 ** contains a plot of the error for each paramater vs the time interval at which the prediction was made.
+Finally, *Figure3* contains a plot of the error for each paramater vs the time interval at which the prediction was made.
 
 ![](./images/img03.png)
 
