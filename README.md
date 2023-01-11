@@ -4,29 +4,37 @@ Investigating the accuracy decay of orbital information over time on the Suomi N
 
 ## **Introduction**
 
-The goal of this project is to apply semantic segmentation to images of the sky in order to categorize each pixel as belonging either to a cloud or to the background atmosphere. The dataset used is the Singapore Whole Sky Imaging Segmentation Database found [here](http://vintage.winklerbros.net/swimseg.html). The description reads: 
+The goal of this project is to confirm the necessity of obtaining satellite orbital information on a regular basis, as the predictions for future states become less certain over time. As orbital real estate becomes more and more crowded, this is a vital step to prevent collisions and maintain a safe operating environment. 
 
-"The SWIMSEG dataset contains 1013 images of sky/cloud patches, along with their corresponding binary segmentation maps. The ground truth annotation was done in consultation with experts from Singapore Meteorological Services. Representative sample images are shown below.
 
-![](./Images/swimseg.jpeg)
+## **Method**
 
-All images were captured in Singapore using WAHRSIS, a calibrated ground-based whole sky imager, over a period of 22 months from October 2013 to July 2015. Each patch covers about 60-70 degrees of the sky with a resolution of 600x600 pixels."
+I acquired several historical LTE's for the Suomi NPP satellite from Space-Track.org ranging from January 2021 to present. I used each of these LTE's to predict what the orbital characteristics of the craft would be today, and compared to the current ground truth longitude, latitude, and altitude as of 1/11/2023 13:38:26 UTC. These parameters were calculated at intervals of 1 week, 2 weeks, 3 weeks, 4 weeks, 2 months, 4 months, 8 months, and 2 years ago. Finally, I plotted the errors at each interval to see if the prediction accuracy truly got worse over time.  
+
 
 ## **Results**
 
-The model used was a standard U-net style architecture with a binary output layer, created using Keras. A hold out set of 203 images (20%) was used for validation. Below are 3 sample results from this validation set — each figure contains the original image, the labeled ground truth, and the model's segmentation predictions.
+** Figure 1 ** shows a table of the raw data — the latitude, longitude, and altitude of the satellite on 1/11/2023, as well as the predictions for these parameters at each interval.
 
-![](./Images/img016.png)
+![](./images/img01.png)
 
-![](./Images/img017.png)
+> Figure 1
 
-![](./Images/img101.png)
+** Figure 2 ** shows the percent error of these calculations compared to the ground truth.
+
+
+![](./images/img02.png)
+
+> Figure 2
+
+Finally, ** Figure 3 ** contains a plot of the error for each paramater vs the time interval at which the prediction was made.
+
+![](./images/img03.png)
 
 ## **Links**
 
-[Original Research Paper by Dev, Lee, and Winkler](https://stefan.winkler.site/Publications/jstars2017.pdf)  
 
-[Jupyter Notebook](https://github.com/LindstromKyle/Binary-Semantic-Segmentation-of-Daytime-Sky-Images/blob/master/Sky_Segmentation.ipynb)  
+[Jupyter Notebook](https://github.com/LindstromKyle/Calculating-Satellite-Orbital-Paramaters-from-LTEs/blob/main/Historical_TLEs.ipynb)  
 
 
 
