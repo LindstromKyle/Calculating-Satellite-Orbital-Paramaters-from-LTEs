@@ -1,4 +1,4 @@
-# Calculating Satellite Orbital Parameters from LTE's
+# Calculating Satellite Orbital Parameters from TLEs
 
 Investigating the accuracy decay of orbital information over time on the Suomi NPP Satellite
 
@@ -9,7 +9,7 @@ The goal of this project is to confirm the necessity of obtaining satellite orbi
 
 ## **Method**
 
-I acquired several historical LTE's for the Suomi NPP satellite from Space-Track.org ranging from January 2021 to present. I used each of these LTE's in combination with pyorbital to predict what the orbital characteristics of the craft would be today, and compared to the current ground truth longitude, latitude, and altitude as of 1/11/2023 13:38:26 UTC. These parameters were calculated at intervals of 1 week, 2 weeks, 3 weeks, 4 weeks, 2 months, 4 months, 8 months, and 2 years ago. Finally, I plotted the errors at each interval to see if the prediction accuracy truly worsens over time.  
+I acquired several historical TLEs for the Suomi NPP satellite from Space-Track.org ranging from January 2021 to present. I used each of these TLEs in combination with pyorbital to predict what the orbital characteristics of the craft would be today, and compared to the current ground truth longitude, latitude, and altitude as of 1/11/2023 13:38:26 UTC. These parameters were calculated at intervals of 1 week, 2 weeks, 3 weeks, 4 weeks, 2 months, 4 months, 8 months, and 2 years ago. Finally, I plotted the errors at each interval to see if the prediction accuracy truly worsens over time.  
 
 
 ## **Results**
